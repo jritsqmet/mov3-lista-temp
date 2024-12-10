@@ -29,8 +29,9 @@ Widget listViewLocal(context){
       final data = snapshot.data!;
       return ListView.builder( itemCount: data.length ,itemBuilder: (context, index){
         final item = data[index];
-        return ListTile(
-          title: Text("hola"),
+        return  ListTile(
+          title: Text(item['name']),
+          subtitle: Image.network(item['image'], height: 100,),
         );
 
       } );
